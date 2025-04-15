@@ -1,3 +1,13 @@
+/**
+  * @file name:DLLink.h
+  * @brief    :Functional interface design
+  * @author   :i33akq@163.com
+  * @date     :2025/04/15
+  * @version  :1.0
+  * @note     :none
+  * @CopyRight (C)   2024-2025   i33akq@163.com   ALL Right Reseverd
+*/
+
 #ifndef DLLINK_H
 #define DLLINK_H
 

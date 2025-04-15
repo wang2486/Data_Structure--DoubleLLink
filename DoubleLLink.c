@@ -1,6 +1,6 @@
 /**
   * @file name:DoubleLLink.c
-  * @brief    :Basic functions of Double linked list
+  * @brief    :functional tests
   * @author   :i33akq@163.com
   * @date     :2025/04/15
   * @version  :1.0

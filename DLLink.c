@@ -1,3 +1,13 @@
+/**
+  * @file name:DLLink.c
+  * @brief    :Basic functions of Double linked list
+  * @author   :i33akq@163.com
+  * @date     :2025/04/15
+  * @version  :1.0
+  * @note     :none
+  * @CopyRight (C)   2024-2025   i33akq@163.com   ALL Right Reseverd
+*/
+
 #include "DLLink.h"
 
 DLNode_t *DLLink_Creat(){
@@ -25,8 +35,7 @@ DLNode_t *DLLink_NewNode(Elemtype_t data){
 }
 
 bool DLLink_HeadInsert(DLNode_t *Head,Elemtype_t data){
-    DLNode_t *New=DLLink_Creat();
-    New->data=data;
+    DLNode_t *New=DLLink_NewNode(data);
     if(!New){
         printf("Failed creat a new node");
         return false;
@@ -43,8 +52,7 @@ bool DLLink_HeadInsert(DLNode_t *Head,Elemtype_t data){
 }
 
 bool DLLink_TailInsert(DLNode_t *Head,Elemtype_t data){
-    DLNode_t *New=DLLink_Creat();
-    New->data=data;
+    DLNode_t *New=DLLink_NewNode(data);
     if(!New){
         printf("Failed creat a new node");
         return false;
@@ -135,8 +143,7 @@ bool DLLinkt_InDest_Place(DLNode_t *Head,Elemtype_t data,int dest){
     if(dest<0 || !Head)  return false;
     if(DLLink_Length(Head)<dest)  return false;
 
-    DLNode_t *New=DLLink_Creat();
-    New->data=data;
+    DLNode_t *New=DLLink_NewNode(data);
     if(!New)  return false;
 
     DLNode_t *prev=Head;
@@ -157,8 +164,7 @@ bool DLLinkt_InDest_Place(DLNode_t *Head,Elemtype_t data,int dest){
 
 bool DLLinkt_InDest_AfterInsert(DLNode_t *Head,Elemtype_t data,int dest){
     if(!Head || Head->next==NULL)  return false;
-    DLNode_t *New=DLLink_Creat();
-    New->data=data;
+    DLNode_t *New=DLLink_NewNode(data);
     if(!New)  return false;
 
     DLNode_t *current=Head;
@@ -189,8 +195,7 @@ bool DLLinkt_InDest_AfterInsert(DLNode_t *Head,Elemtype_t data,int dest){
 }
 bool DLLinkt_InDest_BeforeInsert(DLNode_t *Head,Elemtype_t data,int dest){
     if(!Head || Head->next==NULL)  return false;
-    DLNode_t *New=DLLink_Creat();
-    New->data=data;
+    DLNode_t *New=DLLink_NewNode(data);
     if(!New)  return false;
 
     DLNode_t *previous=Head;
